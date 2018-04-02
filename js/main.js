@@ -54,7 +54,7 @@ $.when(jiggly(),wiggly(),iggly()).then(function(jiggy,wiggly,iggly){
 					$('.zee').append(newDiv);
 			}
 });
-// Nadia VEE
+// Nadia VEE Trainer
 $.when(kakuna(),masq(),typhlo()).then(function(kakuna,masq,typhlo){
 
 			let pokes = vee.myPoke;
@@ -74,7 +74,7 @@ $.when(kakuna(),masq(),typhlo()).then(function(kakuna,masq,typhlo){
 					$('.nadia').append(newDiv);
 			}
 });
-// // Caroline MSPOTUS
+// Caroline MSPOTUS
 $.when(rosy(),milo(),luc()).then(function(rosy,milo,luc){
 
 			let pokes = msPotus.myPoke;
@@ -144,9 +144,7 @@ function iggly() {
 		}
 	});
 }
-
 // TRAINER VEE Nadia
-
 // kakuna
 function kakuna() {
 	return $.ajax({ url: 'https://pokeapi.co/api/v2/pokemon/14/', 
