@@ -257,9 +257,10 @@ function luc() {
 
 //EVENTS
 
+//ZEE HAS TO CHANGE THIS TO MAKE ADDITIONAL ONES FOR EACH TRAINER
 // Start counting divs with class of slide at position 1, and change display on click.	
 let z = 1;
-$('.slideGlass').click(function(){
+$('.slide').click(function(){
 
 	let slideDiv = document.getElementsByClassName('slide');
 	let noheader = document.getElementsByTagName('h1');
