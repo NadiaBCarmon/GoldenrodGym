@@ -1,5 +1,3 @@
-
-
 // Objects
 
 class Pokemon {
@@ -26,12 +24,15 @@ class Trainer {
  		}
 	} 
  }
-let vee = new Trainer();
+
 let pokeBallZee = new Trainer();
+let vee = new Trainer();
 let msPotus = new Trainer();
 // Wait until Ajax calls are done, when this is TRUE gather data from trainer pokeBallZee. 
 // Create a new div to hold the pokemon information and append this information to the new div.
 // Finally, append the new div and all it's contents to the container div. 
+
+// Zee PokeBallZee
 
 $.when(jiggly(),wiggly(),iggly()).then(function(jiggy,wiggly,iggly){
 
@@ -42,14 +43,55 @@ $.when(jiggly(),wiggly(),iggly()).then(function(jiggy,wiggly,iggly){
 				let hp = pokes[i].stats.hp;
 				let attack = pokes[i].stats.attack;
 				let defense = pokes[i].stats.defense;
-				let newDiv = $('<div class="hidden slide" id="mypokes"></div>');
+				let newDiv = $('<div class="hidden slide"></div>');
+				console.log(newDiv);
 
 		 			$(newDiv).append(`<p class="pokename">${name}</p>`);
 		 			$(newDiv).append(`<img src ="${pic}" class="picture">`);
 		 			$(newDiv).append(`<p class="hp">HP: ${hp}</p>`);
 		 			$(newDiv).append(`<p class="attack">ATTACK: ${attack}</p>`);
 		 			$(newDiv).append(`<p class="defense">DEFENSE: ${defense}</p>`);
-					$(newDiv).insertAfter('#glass1');
+					$('.zee').append(newDiv);
+			}
+});
+// Nadia VEE
+$.when(kakuna(),masq(),typhlo()).then(function(kakuna,masq,typhlo){
+
+			let pokes = vee.myPoke;
+			for(let i=0; i < pokes.length;i++){
+				let name = pokes[i].stats.name;
+				let pic = pokes[i].stats.pic;
+				let hp = pokes[i].stats.hp;
+				let attack = pokes[i].stats.attack;
+				let defense = pokes[i].stats.defense;
+				let newDiv = $('<div class="hidden slide"></div>');
+
+		 			$(newDiv).append(`<p class="pokename">${name}</p>`);
+		 			$(newDiv).append(`<img src ="${pic}" class="picture">`);
+		 			$(newDiv).append(`<p class="hp">HP: ${hp}</p>`);
+		 			$(newDiv).append(`<p class="attack">ATTACK: ${attack}</p>`);
+		 			$(newDiv).append(`<p class="defense">DEFENSE: ${defense}</p>`);
+					$('.nadia').append(newDiv);
+			}
+});
+// // Caroline MSPOTUS
+$.when(rosy(),milo(),luc()).then(function(rosy,milo,luc){
+
+			let pokes = msPotus.myPoke;
+			for(let i=0; i < pokes.length;i++){
+				let name = pokes[i].stats.name;
+				let pic = pokes[i].stats.pic;
+				let hp = pokes[i].stats.hp;
+				let attack = pokes[i].stats.attack;
+				let defense = pokes[i].stats.defense;
+				let newDiv = $('<div class="hidden slide"></div>');
+
+		 			$(newDiv).append(`<p class="pokename">${name}</p>`);
+		 			$(newDiv).append(`<img src ="${pic}" class="picture">`);
+		 			$(newDiv).append(`<p class="hp">HP: ${hp}</p>`);
+		 			$(newDiv).append(`<p class="attack">ATTACK: ${attack}</p>`);
+		 			$(newDiv).append(`<p class="defense">DEFENSE: ${defense}</p>`);
+					$('.caroline').append(newDiv);
 			}
 });
 
@@ -105,7 +147,6 @@ function iggly() {
 
 // TRAINER VEE Nadia
 
-
 // kakuna
 function kakuna() {
 	return $.ajax({ url: 'https://pokeapi.co/api/v2/pokemon/14/', 
@@ -156,7 +197,7 @@ function typhlo() {
 	});
 }
 
-// MsPotus Caroline
+// // MsPotus Caroline
 
 // roserade
 function rosy() {
@@ -211,10 +252,10 @@ function luc() {
 
 
 
-		// iggly();
-		// wiggly();
-		// jiggly();
-		// ajaxCalls();
+// 		// iggly();
+// 		// wiggly();
+// 		// jiggly();
+// 		// ajaxCalls();
 
 //EVENTS
 
@@ -250,7 +291,9 @@ $('.slideGlass').click(function(){
 		// slideDiv[z+1].style.display = "none";
 })
 
-          
+
+//NEW FUNCTIONALITIES AFTER THIS!
+
 
 
 
