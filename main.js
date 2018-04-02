@@ -26,7 +26,7 @@ class Trainer {
  		}
 	} 
  }
-let 
+let vee = new Trainer();
 let pokeBallZee = new Trainer();
 let msPotus = new Trainer();
 // Wait until Ajax calls are done, when this is TRUE gather data from trainer pokeBallZee. 
@@ -52,8 +52,6 @@ $.when(jiggly(),wiggly(),iggly()).then(function(jiggy,wiggly,iggly){
 					$(newDiv).insertAfter('#glass1');
 			}
 });
-
-
 
 // Jigglypuff
 function jiggly() {
@@ -105,9 +103,110 @@ function iggly() {
 	});
 }
 
+// TRAINER VEE Nadia
 
 
+// kakuna
+function kakuna() {
+	return $.ajax({ url: 'https://pokeapi.co/api/v2/pokemon/14/', 
+	success: function(data){
+		let stats = {
+			"name" : data.name,
+			"pic": data.sprites.front_shiny,
+			"hp": data.stats[5].base_stat,
+			"attack": data.stats[4].base_stat,
+			"defense": data.stats[3].base_stat,
+		}
+			let kakuna = new Pokemon(stats);
+			vee.myPoke.push(kakuna);
+		}
+	});
+}
+//masquerain
+function masq() {
+	return $.ajax({ url: 'https://pokeapi.co/api/v2/pokemon/284/',
+	success: function(data){
+		let stats = {
+				"name" : data.name,
+				"pic": data.sprites.front_shiny,
+				"hp": data.stats[5].base_stat,
+				"attack": data.stats[4].base_stat,
+				"defense": data.stats[3].base_stat,			
+		}
+			let masq = new Pokemon(stats);
+			vee.myPoke.push(masq);
+		}
+	});
+}
+// typhloslain
+function typhlo() {
+	return $.ajax({ url: 'https://pokeapi.co/api/v2/pokemon/157/',
+	success: function(data){
+		let stats = {
+			"name" : data.name,
+			"pic": data.sprites.front_shiny,
+			"hp": data.stats[5].base_stat,
+			"attack": data.stats[4].base_stat,
+			"defense": data.stats[3].base_stat,
+			
+		}
+			let typhlo = new Pokemon(stats);
+			vee.myPoke.push(typhlo);
+		}
+	});
+}
 
+// MsPotus Caroline
+
+// roserade
+function rosy() {
+	return $.ajax({ url: 'https://pokeapi.co/api/v2/pokemon/407/', 
+	success: function(data){
+		let stats = {
+			"name" : data.name,
+			"pic": data.sprites.front_shiny,
+			"hp": data.stats[5].base_stat,
+			"attack": data.stats[4].base_stat,
+			"defense": data.stats[3].base_stat,
+		}
+			let rosy = new Pokemon(stats);
+			msPotus.myPoke.push(rosy);
+		}
+	});
+}
+// milotic
+function milo() {
+	return $.ajax({ url: 'https://pokeapi.co/api/v2/pokemon/350/',
+	success: function(data){
+		let stats = {
+				"name" : data.name,
+				"pic": data.sprites.front_shiny,
+				"hp": data.stats[5].base_stat,
+				"attack": data.stats[4].base_stat,
+				"defense": data.stats[3].base_stat,			
+		}
+			let milo = new Pokemon(stats);
+			msPotus.myPoke.push(milo);
+		}
+	});
+}
+// lucario
+function luc() {
+	return $.ajax({ url: 'https://pokeapi.co/api/v2/pokemon/174/',
+	success: function(data){
+		let stats = {
+			"name": data.name,
+			"pic": data.sprites.front_shiny,
+			"hp": data.stats[5].base_stat,
+			"attack": data.stats[4].base_stat,
+			"defense": data.stats[3].base_stat,
+			
+		}
+			let luc = new Pokemon(stats);
+			msPotus.myPoke.push(luc);
+		}
+	});
+}
 
 
 
