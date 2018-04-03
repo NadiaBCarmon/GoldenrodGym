@@ -7,7 +7,6 @@
 
 h1 {
   font-size: 26px;
-  text-align:left;
   font-family: 'Press Start 2P', cursive;
 }
 
@@ -33,34 +32,34 @@ h2{
 /*# sourceMappingURL=main.css.map */
 
 .zee {
-  height: 275px;
+  height: 375px;
   width: 300px;
   position: absolute;
   bottom: 0;
   left: 3%;
-  top: 45.3%;
+  top: 55.3%;
   overflow: hidden;
 
 }
 
 .nadia {
-  height: 235px;
+  height: 355px;
   width: 255px;
   position: absolute;
   bottom: 0;
   left: 45.3%;
-  top: 12%;
+  top: 10%;
   overflow: hidden;
 
 }
 
 .caroline {
-  height: 275px;
+  height: 385px;
   width: 300px;
   position: absolute;
   bottom: 0;
-  left: 60%;
-  top: 40.3%;
+  left: 63%;
+  top: 48.3%;
   overflow: hidden;
 
 }
@@ -70,8 +69,8 @@ h2{
   width: 300px;
   position: absolute;
   bottom: 0;
-  left: 5.7%;
-  top: 51.3%;
+  left: 25.7%;
+  top: 17.3%;
 /*   overflow: hidden; */
 
 
@@ -82,8 +81,8 @@ h2{
   width: 255px;
   position: absolute;
   bottom: 0;
-  left: 40.7%;
-  top: 35.3%;
+  left: 23.7%;
+  top: 27.3%;
 /*   overflow: hidden; */
 
 }
@@ -93,9 +92,9 @@ h2{
   width: 300px;
   position: absolute;
   bottom: 0;
-  left: 70%;
-  top: 70.3%;
-  overflow: hidden;
+  left: 50%;
+  top: 23.3%;
+/*   overflow: hidden; */
 }
 
 .hidden {
@@ -114,7 +113,7 @@ position: fixed;
   position: absolute;
   bottom: 0;
   left: 5.7%;
-  top: 51.3%;
+  top: 3.3%;
   opacity: 0.8;
 
 }
@@ -126,8 +125,8 @@ position: fixed;
   border-color: black;
   position: absolute;
   bottom: 0;
-  left: 15.7%;
-  top: 15.3%;
+  left: 13.7%;
+  top: 10.3%;
   opacity: 0.8;
 
 }
@@ -139,7 +138,7 @@ position: fixed;
   border-color: black;
   position: absolute;
   bottom: 0;
-  left: 40.7%;
-  top: 51.3%;
+  left: 30.7%;
+  top: 11.3%;
   opacity: 0.8;
 }
