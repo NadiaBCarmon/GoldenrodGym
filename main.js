@@ -51,7 +51,7 @@ $.when(jiggly(),wiggly(),iggly()).then(function(jiggy,wiggly,iggly){
 		 			$(newDiv).append(`<p class="hp">HP: ${hp}</p>`);
 		 			$(newDiv).append(`<p class="attack">ATTACK: ${attack}</p>`);
 		 			$(newDiv).append(`<p class="defense">DEFENSE: ${defense}</p>`);
-					$('.zee').append(newDiv);
+					$(newDiv).insertAfter(".trainername1");
 			}
 });
 // Nadia VEE Trainer
@@ -71,7 +71,7 @@ $.when(kakuna(),masq(),typhlo()).then(function(kakuna,masq,typhlo){
 		 			$(newDiv).append(`<p class="hp">HP: ${hp}</p>`);
 		 			$(newDiv).append(`<p class="attack">ATTACK: ${attack}</p>`);
 		 			$(newDiv).append(`<p class="defense">DEFENSE: ${defense}</p>`);
-					$('.nadia').append(newDiv);
+					$(newDiv).insertAfter(".trainername2");
 			}
 });
 // Caroline MSPOTUS
@@ -91,7 +91,7 @@ $.when(rosy(),milo(),luc()).then(function(rosy,milo,luc){
 		 			$(newDiv).append(`<p class="hp">HP: ${hp}</p>`);
 		 			$(newDiv).append(`<p class="attack">ATTACK: ${attack}</p>`);
 		 			$(newDiv).append(`<p class="defense">DEFENSE: ${defense}</p>`);
-					$('.caroline').append(newDiv);
+					$(newDiv).insertAfter(".trainername3");
 			}
 });
 
