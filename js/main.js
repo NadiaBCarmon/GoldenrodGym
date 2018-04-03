@@ -43,7 +43,7 @@ $.when(jiggly(),wiggly(),iggly()).then(function(jiggy,wiggly,iggly){
 				let hp = pokes[i].stats.hp;
 				let attack = pokes[i].stats.attack;
 				let defense = pokes[i].stats.defense;
-				let newDiv = $('<div class="hidden slide"></div>');
+				let newDiv = $('<div class="hidden slidezee"></div>');
 				console.log(newDiv);
 
 		 			$(newDiv).append(`<p class="pokename">${name}</p>`);
@@ -64,7 +64,7 @@ $.when(kakuna(),masq(),typhlo()).then(function(kakuna,masq,typhlo){
 				let hp = pokes[i].stats.hp;
 				let attack = pokes[i].stats.attack;
 				let defense = pokes[i].stats.defense;
-				let newDiv = $('<div class="hidden slide"></div>');
+				let newDiv = $('<div class="hidden slidenadia"></div>');
 
 		 			$(newDiv).append(`<p class="pokename">${name}</p>`);
 		 			$(newDiv).append(`<img src ="${pic}" class="picture">`);
@@ -84,7 +84,7 @@ $.when(rosy(),milo(),luc()).then(function(rosy,milo,luc){
 				let hp = pokes[i].stats.hp;
 				let attack = pokes[i].stats.attack;
 				let defense = pokes[i].stats.defense;
-				let newDiv = $('<div class="hidden slide"></div>');
+				let newDiv = $('<div class="hidden slidecaroline"></div>');
 
 		 			$(newDiv).append(`<p class="pokename">${name}</p>`);
 		 			$(newDiv).append(`<img src ="${pic}" class="picture">`);
@@ -231,7 +231,7 @@ function milo() {
 }
 // lucario
 function luc() {
-	return $.ajax({ url: 'https://pokeapi.co/api/v2/pokemon/174/',
+	return $.ajax({ url: 'https://pokeapi.co/api/v2/pokemon/448/',
 	success: function(data){
 		let stats = {
 			"name": data.name,
@@ -260,14 +260,14 @@ function luc() {
 //ZEE HAS TO CHANGE THIS TO MAKE ADDITIONAL ONES FOR EACH TRAINER
 // Start counting divs with class of slide at position 1, and change display on click.	
 let z = 1;
-$('.slide').click(function(){
+$('.zee').click(function(){
 
-	let slideDiv = document.getElementsByClassName('slide');
-	let noheader = document.getElementsByTagName('h1');
-	let nowelcome = document.getElementsByClassName('.welcome');
+	let slideDiv = document.getElementsByClassName('slidezee');
+	// let noheader = document.getElementsByTagName('h1');
+	// let nowelcome = document.getElementsByClassName('.welcome');
 
-	$(noheader).remove();
-	$(nowelcome).remove('.welcome');
+	// $(noheader).remove();
+	// $(nowelcome).remove('.welcome');
 	
 
 	if (z === slideDiv.length){
@@ -293,6 +293,67 @@ $('.slide').click(function(){
 
 //NEW FUNCTIONALITIES AFTER THIS!
 
+let n = 1;
+$('.nadia').click(function(){
+
+	let slideDiv = document.getElementsByClassName('slidenadia');
+	// let noheader = document.getElementsByTagName('h1');
+	// let nowelcome = document.getElementsByClassName('.welcome');
+
+	// $(noheader).remove();
+	// $(nowelcome).remove('.welcome');
+	
+
+	if (n === slideDiv.length){
+
+		n = 1;
+		slideDiv[n].style.display = "block"; 
+		slideDiv[slideDiv.length-1].style.display = "none";
+	} else {
+		n++
+		slideDiv[n].style.display = "block";
+
+		if(n === 1){
+
+		slideDiv[n].style.display ="block";
+		} else {
+			slideDiv[n-1].style.display ="none";
+			// slideDiv[z+1].style.display="none"; //Don't need this. 
+		}
+	}
+		// slideDiv[z+1].style.display = "none";
+})
+
+let c = 1;
+$('.caroline').click(function(){
+
+	let slideDiv = document.getElementsByClassName('slidecaroline');
+	// let noheader = document.getElementsByTagName('h1');
+	// let nowelcome = document.getElementsByClassName('.welcome');
+
+	// $(noheader).remove();
+	// $(nowelcome).remove('.welcome');
+	
+
+	if (c === slideDiv.length){
+
+		c = 1;
+		slideDiv[c].style.display = "block"; 
+		slideDiv[slideDiv.length-1].style.display = "none";
+	} else {
+		c++
+		slideDiv[c].style.display = "block";
+
+		if(c === 1){
+
+		slideDiv[c].style.display ="block";
+		} else {
+			slideDiv[c-1].style.display ="none";
+			// slideDiv[z+1].style.display="none"; //Don't need this. 
+		}
+	}
+		// slideDiv[z+1].style.display = "none";
+})
 
 
 
