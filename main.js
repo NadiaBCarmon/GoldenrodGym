@@ -336,15 +336,25 @@ $('.caroline').click(function(){
 
 
 
-var x = document.getElementById("myAudio"); 
+let x = document.getElementById("myAudio"); 
 
 function playAudio() { 
     x.play(); 
 } 
 playAudio();
 
+let y = document.getElementById("myAudio1"); 
+
+function playAudio1() { 
+    y.play(); 
+} 
 
 
+	x.addEventListener('ended', function() {
+		playAudio1();
+	})
 
-
+	// y.addEventListener('ended', function() {
+	// 	playAudio();
+	// })
 
