@@ -1,20 +1,144 @@
-html, body {
+ body {
+  background-image: url("../Image/PokemonArena.png");
+  background-size: cover;
+  background-attachment: fixed;
   margin: 0px;
   width: 100%; }
 
-img.arena {
-  width: 100%; }
+h1 {
+  font-size: 26px;
+  font-family: 'Press Start 2P', cursive;
+}
 
-#arenaP {
-  position: relative; }
+h2{
+    font-size: 36px;
+  text-align:left;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+/*#arenaP {
+  position: relative; }*/
 
 #pokeBall {
   position: absolute;
   bottom: 0;
-  left: 40%;
-  top: 460px;
-  width: 33px;
-  height: 56px;
+  left: 40.8%;
+  top: 51.3%;
+  width: 268px;
+  height: 260px;
   transform: scale(1, 0.5); }
 
 /*# sourceMappingURL=main.css.map */
+
+.zee {
+  height: 375px;
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 3%;
+  top: 55.3%;
+  overflow: hidden;
+
+}
+
+.nadia {
+  height: 355px;
+  width: 255px;
+  position: absolute;
+  bottom: 0;
+  left: 45.3%;
+  top: 10%;
+  overflow: hidden;
+
+}
+
+.caroline {
+  height: 385px;
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 63%;
+  top: 48.3%;
+  overflow: hidden;
+
+}
+
+.slidezee {
+  height: 275px;
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 25.7%;
+  top: 17.3%;
+/*   overflow: hidden; */
+
+
+}
+
+.slidenadia {
+  height: 235px;
+  width: 255px;
+  position: absolute;
+  bottom: 0;
+  left: 23.7%;
+  top: 27.3%;
+/*   overflow: hidden; */
+
+}
+
+.slidecaroline {
+  height: 275px;
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  top: 23.3%;
+/*   overflow: hidden; */
+}
+
+.hidden {
+  display: none;
+}
+
+/*.trainer {
+position: fixed;
+}*/
+
+.trainername1 {
+  height: 275px;
+  width: 300px;
+  border: thick;
+  border-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 5.7%;
+  top: 3.3%;
+  opacity: 0.8;
+
+}
+
+.trainername2 {
+  height: 235px;
+  width: 255px;
+  border: thick;
+  border-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 13.7%;
+  top: 10.3%;
+  opacity: 0.8;
+
+}
+
+.trainername3 {
+  height: 275px;
+  width: 300px;
+  border: thick;
+  border-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 30.7%;
+  top: 11.3%;
+  opacity: 0.8;
+}
