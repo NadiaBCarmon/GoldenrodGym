@@ -1,5 +1,3 @@
-
-
 // Objects
 
 class Pokemon {
@@ -26,12 +24,15 @@ class Trainer {
  		}
 	} 
  }
-let vee = new Trainer();
+
 let pokeBallZee = new Trainer();
+let vee = new Trainer();
 let msPotus = new Trainer();
 // Wait until Ajax calls are done, when this is TRUE gather data from trainer pokeBallZee. 
 // Create a new div to hold the pokemon information and append this information to the new div.
 // Finally, append the new div and all it's contents to the container div. 
+
+// Zee PokeBallZee
 
 $.when(jiggly(),wiggly(),iggly()).then(function(jiggy,wiggly,iggly){
 
@@ -42,14 +43,55 @@ $.when(jiggly(),wiggly(),iggly()).then(function(jiggy,wiggly,iggly){
 				let hp = pokes[i].stats.hp;
 				let attack = pokes[i].stats.attack;
 				let defense = pokes[i].stats.defense;
-				let newDiv = $('<div class="hidden slide" id="mypokes"></div>');
+				let newDiv = $('<div class="hidden slidezee"></div>');
+				console.log(newDiv);
 
 		 			$(newDiv).append(`<p class="pokename">${name}</p>`);
 		 			$(newDiv).append(`<img src ="${pic}" class="picture">`);
 		 			$(newDiv).append(`<p class="hp">HP: ${hp}</p>`);
 		 			$(newDiv).append(`<p class="attack">ATTACK: ${attack}</p>`);
 		 			$(newDiv).append(`<p class="defense">DEFENSE: ${defense}</p>`);
-					$(newDiv).insertAfter('#glass1');
+					$('.zee').append(newDiv);
+			}
+});
+// Nadia VEE Trainer
+$.when(kakuna(),masq(),typhlo()).then(function(kakuna,masq,typhlo){
+
+			let pokes = vee.myPoke;
+			for(let i=0; i < pokes.length;i++){
+				let name = pokes[i].stats.name;
+				let pic = pokes[i].stats.pic;
+				let hp = pokes[i].stats.hp;
+				let attack = pokes[i].stats.attack;
+				let defense = pokes[i].stats.defense;
+				let newDiv = $('<div class="hidden slidenadia"></div>');
+
+		 			$(newDiv).append(`<p class="pokename">${name}</p>`);
+		 			$(newDiv).append(`<img src ="${pic}" class="picture">`);
+		 			$(newDiv).append(`<p class="hp">HP: ${hp}</p>`);
+		 			$(newDiv).append(`<p class="attack">ATTACK: ${attack}</p>`);
+		 			$(newDiv).append(`<p class="defense">DEFENSE: ${defense}</p>`);
+					$('.nadia').append(newDiv);
+			}
+});
+// Caroline MSPOTUS
+$.when(rosy(),milo(),luc()).then(function(rosy,milo,luc){
+
+			let pokes = msPotus.myPoke;
+			for(let i=0; i < pokes.length;i++){
+				let name = pokes[i].stats.name;
+				let pic = pokes[i].stats.pic;
+				let hp = pokes[i].stats.hp;
+				let attack = pokes[i].stats.attack;
+				let defense = pokes[i].stats.defense;
+				let newDiv = $('<div class="hidden slidecaroline"></div>');
+
+		 			$(newDiv).append(`<p class="pokename">${name}</p>`);
+		 			$(newDiv).append(`<img src ="${pic}" class="picture">`);
+		 			$(newDiv).append(`<p class="hp">HP: ${hp}</p>`);
+		 			$(newDiv).append(`<p class="attack">ATTACK: ${attack}</p>`);
+		 			$(newDiv).append(`<p class="defense">DEFENSE: ${defense}</p>`);
+					$('.caroline').append(newDiv);
 			}
 });
 
@@ -102,10 +144,7 @@ function iggly() {
 		}
 	});
 }
-
 // TRAINER VEE Nadia
-
-
 // kakuna
 function kakuna() {
 	return $.ajax({ url: 'https://pokeapi.co/api/v2/pokemon/14/', 
@@ -156,7 +195,7 @@ function typhlo() {
 	});
 }
 
-// MsPotus Caroline
+// // MsPotus Caroline
 
 // roserade
 function rosy() {
@@ -192,7 +231,7 @@ function milo() {
 }
 // lucario
 function luc() {
-	return $.ajax({ url: 'https://pokeapi.co/api/v2/pokemon/174/',
+	return $.ajax({ url: 'https://pokeapi.co/api/v2/pokemon/448/',
 	success: function(data){
 		let stats = {
 			"name": data.name,
@@ -211,35 +250,29 @@ function luc() {
 
 
 
-		// iggly();
-		// wiggly();
-		// jiggly();
-		// ajaxCalls();
+// 		// iggly();
+// 		// wiggly();
+// 		// jiggly();
+// 		// ajaxCalls();
 
 //EVENTS
 
+//ZEE HAS TO CHANGE THIS TO MAKE ADDITIONAL ONES FOR EACH TRAINER
 // Start counting divs with class of slide at position 1, and change display on click.	
-let z = 1;
-$('.slideGlass').click(function(){
+let z = 0;
+$('.zee').click(function(){
 
-	let slideDiv = document.getElementsByClassName('slide');
-	let noheader = document.getElementsByTagName('h1');
-	let nowelcome = document.getElementsByClassName('.welcome');
-
-	$(noheader).remove();
-	$(nowelcome).remove('.welcome');
-	
-
+	let slideDiv = document.getElementsByClassName('slidezee');
 	if (z === slideDiv.length){
 
-		z = 1;
+		z = 0;
 		slideDiv[z].style.display = "block"; 
 		slideDiv[slideDiv.length-1].style.display = "none";
 	} else {
 		z++
 		slideDiv[z].style.display = "block";
-
-		if(z === 1){
+		
+		if(z === 0){
 
 		slideDiv[z].style.display ="block";
 		} else {
@@ -250,7 +283,56 @@ $('.slideGlass').click(function(){
 		// slideDiv[z+1].style.display = "none";
 })
 
-          
+
+//NEW FUNCTIONALITIES AFTER THIS!
+
+let n = 0;
+$('.nadia').click(function(){
+
+	let nadslide = document.getElementsByClassName('slidenadia');
+	if (n === nadslide.length){
+
+		n = 0;
+		nadslide[n].style.display = "block"; 
+		nadslide[nadslide.length-1].style.display = "none";
+	} else {
+		n++
+		nadslide[n].style.display = "block";
+
+		if(n === 0){
+
+		nadslide[n].style.display ="block";
+		} else {
+			nadslide[n-1].style.display ="none";
+			// slideDiv[z+1].style.display="none"; //Don't need this. 
+		}
+	}
+		// slideDiv[z+1].style.display = "none";
+})
+
+let c = 0;
+$('.caroline').click(function(){
+
+	let carslide = document.getElementsByClassName('slidecaroline');
+	if (c === carslide.length){
+
+		c = 0;
+		carslide[c].style.display = "block"; 
+		carslide[carslide.length-1].style.display = "none";
+	} else {
+		c++
+		carslide[c].style.display = "block";
+
+		if(c === 0){
+
+		carslide[c].style.display ="block";
+		} else {
+			carslide[c-1].style.display ="none";
+			// slideDiv[z+1].style.display="none"; //Don't need this. 
+		}
+	}
+		// slideDiv[z+1].style.display = "none";
+})
 
 
 
