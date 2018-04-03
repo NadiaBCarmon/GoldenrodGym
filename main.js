@@ -250,9 +250,14 @@ $('.slideGlass').click(function(){
 		// slideDiv[z+1].style.display = "none";
 })
 
-          
 
 
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+    x.play(); 
+} 
+playAudio();
 
 
 
