@@ -259,27 +259,20 @@ function luc() {
 
 //ZEE HAS TO CHANGE THIS TO MAKE ADDITIONAL ONES FOR EACH TRAINER
 // Start counting divs with class of slide at position 1, and change display on click.	
-let z = 1;
+let z = 0;
 $('.zee').click(function(){
 
 	let slideDiv = document.getElementsByClassName('slidezee');
-	// let noheader = document.getElementsByTagName('h1');
-	// let nowelcome = document.getElementsByClassName('.welcome');
-
-	// $(noheader).remove();
-	// $(nowelcome).remove('.welcome');
-	
-
 	if (z === slideDiv.length){
 
-		z = 1;
+		z = 0;
 		slideDiv[z].style.display = "block"; 
 		slideDiv[slideDiv.length-1].style.display = "none";
 	} else {
 		z++
 		slideDiv[z].style.display = "block";
-
-		if(z === 1){
+		
+		if(z === 0){
 
 		slideDiv[z].style.display ="block";
 		} else {
@@ -293,62 +286,48 @@ $('.zee').click(function(){
 
 //NEW FUNCTIONALITIES AFTER THIS!
 
-let n = 1;
+let n = 0;
 $('.nadia').click(function(){
 
-	let slideDiv = document.getElementsByClassName('slidenadia');
-	// let noheader = document.getElementsByTagName('h1');
-	// let nowelcome = document.getElementsByClassName('.welcome');
+	let nadslide = document.getElementsByClassName('slidenadia');
+	if (n === nadslide.length){
 
-	// $(noheader).remove();
-	// $(nowelcome).remove('.welcome');
-	
-
-	if (n === slideDiv.length){
-
-		n = 1;
-		slideDiv[n].style.display = "block"; 
-		slideDiv[slideDiv.length-1].style.display = "none";
+		n = 0;
+		nadslide[n].style.display = "block"; 
+		nadslide[nadslide.length-1].style.display = "none";
 	} else {
 		n++
-		slideDiv[n].style.display = "block";
+		nadslide[n].style.display = "block";
 
-		if(n === 1){
+		if(n === 0){
 
-		slideDiv[n].style.display ="block";
+		nadslide[n].style.display ="block";
 		} else {
-			slideDiv[n-1].style.display ="none";
+			nadslide[n-1].style.display ="none";
 			// slideDiv[z+1].style.display="none"; //Don't need this. 
 		}
 	}
 		// slideDiv[z+1].style.display = "none";
 })
 
-let c = 1;
+let c = 0;
 $('.caroline').click(function(){
 
-	let slideDiv = document.getElementsByClassName('slidecaroline');
-	// let noheader = document.getElementsByTagName('h1');
-	// let nowelcome = document.getElementsByClassName('.welcome');
+	let carslide = document.getElementsByClassName('slidecaroline');
+	if (c === carslide.length){
 
-	// $(noheader).remove();
-	// $(nowelcome).remove('.welcome');
-	
-
-	if (c === slideDiv.length){
-
-		c = 1;
-		slideDiv[c].style.display = "block"; 
-		slideDiv[slideDiv.length-1].style.display = "none";
+		c = 0;
+		carslide[c].style.display = "block"; 
+		carslide[carslide.length-1].style.display = "none";
 	} else {
 		c++
-		slideDiv[c].style.display = "block";
+		carslide[c].style.display = "block";
 
-		if(c === 1){
+		if(c === 0){
 
-		slideDiv[c].style.display ="block";
+		carslide[c].style.display ="block";
 		} else {
-			slideDiv[c-1].style.display ="none";
+			carslide[c-1].style.display ="none";
 			// slideDiv[z+1].style.display="none"; //Don't need this. 
 		}
 	}
